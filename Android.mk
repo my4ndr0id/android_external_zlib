@@ -20,7 +20,8 @@ zlib_files := \
 	inflate.c \
 	infback.c \
 	inftrees.c \
-	inffast.c
+	inffast.c \
+	slhash.c
 
 zlib_arm_files :=
 zlib_arm_flags :=
@@ -91,7 +92,7 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:=        \
-	minigzip.c
+	test/minigzip.c
 
 LOCAL_MODULE:= gzip
 
@@ -102,7 +103,7 @@ include $(BUILD_EXECUTABLE)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:=        \
-	minigzip.c
+	test/minigzip.c
 
 LOCAL_MODULE:= minigzip
 
